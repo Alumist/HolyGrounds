@@ -1,0 +1,15 @@
+{
+  "name": "coffee-voter",
+  "version": "1.0.0",
+  "description": "coffee blog",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Nick Quiroz",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
