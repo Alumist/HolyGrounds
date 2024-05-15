@@ -1,26 +1,39 @@
-import { Nav, Dropdown, NavItem, NavLink } from 'react-bootstrap';
+import { Nav, Dropdown, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <Nav className='justify-content-center m-5' activeKey='/home'>
-      <Nav.Item>
-        <Nav.Link href='/' style={{ color: 'black' }}>
-          Coffee
-        </Nav.Link>
-      </Nav.Item>
-      <Dropdown as={NavItem}>
-        <Dropdown.Toggle as={NavLink} style={{ color: 'black' }}>
-          Want to Add to the list!
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Link to='/addshop' style={{ textDecoration: 'none' }}>
-            <Dropdown.Item as='a'>Add</Dropdown.Item>
-          </Link>
-          <Dropdown.Item as='a'>Vote</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </Nav>
+    <Container>
+      <Row>
+        <Col>
+          <Nav className='justify-content-center m-5' activeKey='/home'>
+            <Nav.Item>
+              <Nav.Link href='/' style={{ color: 'black', fontSize: '40px' }}>
+                HolyGrounds
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Col>
+      </Row>
+      <Row>
+        <Col
+          className='d-flex justify-content-center'
+          style={{ marginBottom: '30px' }}
+        >
+          <Dropdown as={Nav.Item}>
+            <Dropdown.Toggle as={Nav.Link} style={{ color: 'black' }}>
+              Want to Add to the list!
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Link to='/addshop' style={{ textDecoration: 'none' }}>
+                <Dropdown.Item as='a'>Add</Dropdown.Item>
+              </Link>
+              <Dropdown.Item as='a'>Vote</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
