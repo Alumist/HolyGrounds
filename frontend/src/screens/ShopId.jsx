@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import Shops from '../components/Shops';
 import axios from 'axios';
 
-const ShopId = ({ match }) => {
+//match?
+const ShopId = () => {
   const [shop, setShop] = useState({});
 
   const { id: shopId } = useParams();

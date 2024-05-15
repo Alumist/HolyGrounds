@@ -5,12 +5,16 @@ const Header = () => {
   return (
     <Nav className='justify-content-center m-5' activeKey='/home'>
       <Nav.Item>
-        <Nav.Link href='/'>Coffee</Nav.Link>
+        <Nav.Link href='/' style={{ color: 'black' }}>
+          Coffee
+        </Nav.Link>
       </Nav.Item>
       <Dropdown as={NavItem}>
-        <Dropdown.Toggle as={NavLink}>Want to Add to the list!</Dropdown.Toggle>
+        <Dropdown.Toggle as={NavLink} style={{ color: 'black' }}>
+          Want to Add to the list!
+        </Dropdown.Toggle>
         <Dropdown.Menu>
-          <Link to='/addshop'>
+          <Link to='/addshop' style={{ textDecoration: 'none' }}>
             <Dropdown.Item as='a'>Add</Dropdown.Item>
           </Link>
           <Dropdown.Item as='a'>Vote</Dropdown.Item>
