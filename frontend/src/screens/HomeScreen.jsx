@@ -16,11 +16,17 @@ const HomeScreen = () => {
     };
     fetchShops();
   }, []);
-
+  //BackGround color future change? Lighter or no color at all.
   return (
     <>
       <h1>Shops!</h1>
-      <Row>
+      <Row
+        style={{
+          backgroundColor: '#c7a691',
+          padding: '50px',
+          borderRadius: '20px',
+        }}
+      >
         {shops.map((shop) => (
           <Col key={shop._id} sm={12} md={6} lg={4} xl={3}>
             <Shops shop={shop} />
