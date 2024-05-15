@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 import Shops from '../components/Shops';
 import axios from 'axios';
 
@@ -20,11 +20,14 @@ const ShopId = ({ match }) => {
 
   return (
     <>
-      <Row>
-        <Col md={6}>
-          <Shops shop={shop} />
-        </Col>
-      </Row>
+      <Card>
+        <Card.Body>
+          <Card.Title as='h2'>
+            <strong>{shop.name}</strong>
+          </Card.Title>
+          <Card.Text as='div'>{shop.description}</Card.Text>
+        </Card.Body>
+      </Card>
     </>
   );
 };

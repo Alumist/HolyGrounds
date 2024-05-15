@@ -14,14 +14,12 @@ import ShopId from './screens/ShopId';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomeScreen />} />
       <Route path='/addshop' element={<AddShop />} />
-      <Route path='/shop/id' element={<ShopId></ShopId>} />
+      <Route path='/shop/:id' element={<ShopId></ShopId>} />
     </Route>
   )
 );
