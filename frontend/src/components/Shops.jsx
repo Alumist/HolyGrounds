@@ -1,5 +1,6 @@
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../styles/button.css';
 
 const Shops = ({ shop }) => {
   return (
