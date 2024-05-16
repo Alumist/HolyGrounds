@@ -1,4 +1,5 @@
-import { Form } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
+import shopImg from '../events/addShop';
 
 const AddShop = () => {
   return (
@@ -16,7 +17,12 @@ const AddShop = () => {
             <Form.Label>Shop's Description</Form.Label>
             <Form.Control as='textarea' rows={3} />
           </Form.Group>
+          <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
+            <Form.Label>Shop's Socials</Form.Label>
+            <Form.Control as='textarea' rows={1} />
+          </Form.Group>
         </Form.Group>
+        <Button onClick={shopImg}>Submit</Button>
       </Form>
     </>
   );
