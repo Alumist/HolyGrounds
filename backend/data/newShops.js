@@ -6,3 +6,5 @@ const newShop = [
     social: 'blank'
   },
 ];
+
+export default newShop;

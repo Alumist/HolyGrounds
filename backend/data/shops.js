@@ -14,17 +14,26 @@ const shops = [
     image:
       'https://mepesg.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-20-at-5.25.48-PM.png',
     description: 'Arcade Coffee, based out of Riverside California',
+    socials: 'https://www.instagram.com/tweecoffee/?hl=en',
+    location: 'Riverside, CA',
+    address: '9344 Magnolia Ave, Riverside, CA 92503',
   },
   {
     name: 'Klatch Coffee',
     image:
       'https://cdn.sanity.io/images/vrmk0jny/production/17f6ac148a633f44b8a9461ab2d160ebf5b8122e-800x800.jpg?q=20&auto=format',
     description: 'Award winning coffee... test test test',
+    socials: 'https://www.instagram.com/tweecoffee/?hl=en',
+    location: 'Riverside, CA',
+    address: '9344 Magnolia Ave, Riverside, CA 92503',
   },
   {
     name: 'Coffee',
     image: 'null',
     description: 'test',
+    socials: 'https://www.instagram.com/tweecoffee/?hl=en',
+    location: 'Riverside, CA',
+    address: '9344 Magnolia Ave, Riverside, CA 92503',
   },
 ];
 

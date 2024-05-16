@@ -7,8 +7,8 @@ const shopSchema = new mongoose.Schema(
     image: { type: String, required: true },
     description: { type: String, required: true },
     socials: { type: String, required: true },
-    location: { type: Number, required: true },
-    address: { type: Number, required: true },
+    location: { type: String, required: true },
+    address: { type: String, required: true },
   },
   {
     timestamps: true,
