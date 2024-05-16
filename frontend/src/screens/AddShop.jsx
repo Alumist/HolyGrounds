@@ -1,7 +1,20 @@
 import { Form, Button } from 'react-bootstrap';
 import shopImg from '../events/addShop';
+import { useState } from 'react';
+
+//Set Limit Text
 
 const AddShop = () => {
+  const TextLimitForm = () => {
+    const [text, setText] = useState('');
+    const maxLength = 70; // Set your text limit here
+
+    const handleChange = (event) => {
+      if (event.target.value.length <= maxLength) {
+        setText(event.target.value);
+      }
+    };
+  };
   return (
     <>
       <h1>Add Shop</h1>
@@ -15,7 +28,12 @@ const AddShop = () => {
           </Form.Group>
           <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
             <Form.Label>Shop's Description</Form.Label>
-            <Form.Control as='textarea' rows={3} />
+            <Form.Control
+              as='textarea'
+              rows={3}
+              onChange={handleChange}
+              maxLength={maxLength}
+            />
           </Form.Group>
           <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
             <Form.Label>Shop's Socials</Form.Label>
