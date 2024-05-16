@@ -32,7 +32,7 @@ const importData = async () => {
     const createdShops = await Shop.insertMany(currentShops);
 
     const newShopsWithShop = newShops.map((newShop) => {
-      return { ...newShop, shop: createdShops[0]._id };
+      return { ...newShop, shop: createdShops[0]._id, user: adminUser };
     });
 
     await AddedShop.insertMany(newShopsWithShop);
@@ -66,7 +66,6 @@ const destroyData = async () => {
 //if the argument is -i then the importData function is called
 if (process.argv[2] === '-d') {
   destroyData();
-}
-else {
+} else {
   importData();
 }
