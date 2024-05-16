@@ -5,15 +5,13 @@ import { useState } from 'react';
 //Set Limit Text
 
 const AddShop = () => {
-  const TextLimitForm = () => {
-    const [text, setText] = useState('');
-    const maxLength = 70; // Set your text limit here
+  const [text, setText] = useState('');
+  const maxLength = 300; // Set your text limit here
 
-    const handleChange = (event) => {
-      if (event.target.value.length <= maxLength) {
-        setText(event.target.value);
-      }
-    };
+  const handleChange = (event) => {
+    if (event.target.value.length <= maxLength) {
+      setText(event.target.value);
+    }
   };
   return (
     <>
@@ -30,6 +28,7 @@ const AddShop = () => {
             <Form.Label>Shop's Description</Form.Label>
             <Form.Control
               as='textarea'
+              value={text}
               rows={3}
               onChange={handleChange}
               maxLength={maxLength}
