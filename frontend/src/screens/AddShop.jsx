@@ -3,7 +3,7 @@ import shopImg from '../events/addShop';
 import { useState } from 'react';
 
 //Set Limit Text
-
+//text here is the value... so setText is being targeted. which in return is the value of text.
 const AddShop = () => {
   const [text, setText] = useState('');
   const maxLength = 300; // Set your text limit here
