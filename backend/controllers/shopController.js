@@ -1,4 +1,4 @@
-import asyncHandler from '../middleware/asyncHandler';
+import asyncHandler from '../middleware/asyncHandler.js';
 import Shop from '../models/shopModel.js';
 
 //fetches shops from the database
