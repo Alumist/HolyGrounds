@@ -32,7 +32,7 @@ const importData = async () => {
     const createdShops = await Shop.insertMany(currentShops);
 
     const newShopsWithShop = newShops.map((newShop) => {
-      return { ...newShop, shop: createdShops._id, user: adminUser };
+      return { ...newShop, shop: createdShops[0]._id, user: adminUser };
     });
 
     await AddedShop.insertMany(newShopsWithShop);
