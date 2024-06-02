@@ -4,6 +4,7 @@ dotenv.config();
 import connectDb from './config/db.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import shopRoutes from './routes/shopRoutes.js';
+import voteRoutes from './routes/voteRoutes.js';
 //to access the environment variable, we use process.env.PORT "process.env..."
 const port = process.env.PORT || 5000;
 
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
   res.send('api running');
 });
 
+app.use('/api/vote', voteRoutes);
 app.use('/api/shops', shopRoutes);
 app.use(notFound);
 app.use(errorHandler);
