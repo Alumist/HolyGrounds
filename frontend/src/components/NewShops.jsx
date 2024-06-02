@@ -2,7 +2,7 @@ import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/button.css';
 
-const Shops = ({ shop }) => {
+const ShopVote = ({ shop }) => {
   return (
     <Card className='m-1' border='dark' style={{ width: '18rem' }}>
       <Card.Img variant='top' src={shop.image} />
@@ -12,7 +12,7 @@ const Shops = ({ shop }) => {
       >
         <Card.Body>
           <Card.Title as='h3'>
-            <strong>{shop.name}</strong>
+            <strong>{ShopVote.name}</strong>
           </Card.Title>
           <Card.Text as='div'>{shop.description}</Card.Text>
         </Card.Body>
@@ -25,7 +25,7 @@ const Shops = ({ shop }) => {
         }}
       >
         <Link
-          to={shop.socials}
+          to={ShopVote.socials}
           target='_blank'
           style={{ textDecoration: 'none' }}
         >
@@ -38,4 +38,4 @@ const Shops = ({ shop }) => {
   );
 };
 
-export default Shops;
+export default ShopVote;

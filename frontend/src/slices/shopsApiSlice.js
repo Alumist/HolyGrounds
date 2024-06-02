@@ -20,12 +20,16 @@ export const shopsApiSlice = apiSlice.injectEndpoints({
       keepUnusedDataFor: 5,
     }),
     getShopVotes: builder.query({
-      query: (shopId) => ({
-        url: `${VOTESHOPS_URL}/${shopId}/votes`,
+      query: () => ({
+        url: VOTESHOPS_URL,
       }),
       keepUnusedDataFor: 5,
     }),
   }),
 });
 
-export const { useGetShopsQuery, useGetShopIndividualQuery, useGetShopVotes } = shopsApiSlice;
+export const {
+  useGetShopsQuery,
+  useGetShopIndividualQuery,
+  useGetShopVotesQuery,
+} = shopsApiSlice;
