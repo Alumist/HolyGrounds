@@ -1,4 +1,4 @@
-import { SHOPS_URL } from '../constants';
+import { SHOPS_URL, VOTESHOPS_URL } from '../constants';
 import { apiSlice } from './apiSlice';
 
 //The injectEndpoints function is used to add new endpoints to an existing API slice.
@@ -19,7 +19,13 @@ export const shopsApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    getShopVotes: builder.query({
+      query: (shopId) => ({
+        url: `${VOTESHOPS_URL}/${shopId}/votes`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
-export const { useGetShopsQuery, useGetShopIndividualQuery } = shopsApiSlice;
+export const { useGetShopsQuery, useGetShopIndividualQuery, useGetShopVotes } = shopsApiSlice;

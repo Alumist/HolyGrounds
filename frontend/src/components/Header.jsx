@@ -28,7 +28,9 @@ const Header = () => {
               <Link to='/addshop' style={{ textDecoration: 'none' }}>
                 <Dropdown.Item as='a'>Add</Dropdown.Item>
               </Link>
+              <Link to='/vote' style={{ textDecoration: 'none' }}>
               <Dropdown.Item as='a'>Vote</Dropdown.Item>
+              </Link>
             </Dropdown.Menu>
           </Dropdown>
         </Col>

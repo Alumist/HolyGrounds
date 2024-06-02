@@ -13,6 +13,7 @@ import './index.css';
 import HomeScreen from './screens/HomeScreen';
 import AddShop from './screens/AddShop';
 import ShopId from './screens/ShopId';
+import Vote from './screens/Vote';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomeScreen />} />
       <Route path='/addshop' element={<AddShop />} />
+      <Route path='/vote' element={<Vote />} />
       <Route path='/shop/:id' element={<ShopId></ShopId>} />
     </Route>
   )
