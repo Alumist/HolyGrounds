@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useGetShopIndividualQuery } from '../slices/shopsApiSlice';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
 
 //match?
 const ShopId = () => {
@@ -18,9 +20,11 @@ const ShopId = () => {
       </Link>
 
       {isLoading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <div>{error?.data?.message || error.error}</div>
+        <Message variant='danger'>
+          {error?.data?.message || error.error}
+        </Message>
       ) : (
         <>
           <Card>
